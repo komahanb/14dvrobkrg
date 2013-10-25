@@ -1,6 +1,6 @@
       program problemKriging
 
-        use dimKrig
+        use dimKrig,only:probtype,id_proc
 !
       implicit none
 !
@@ -34,7 +34,7 @@
 !     to the evaluation subroutines EVAL_*
 !
       double precision DAT(2000)
-      integer IDAT(1)
+      integer IDAT(2000)
 !
 !     Place for storing the Ipopt Problem Handle
 !
@@ -60,67 +60,126 @@
 
       call MPI_START
 
-      kprob=1
+  !**********************************************************************
 
-      Lifttarget=0.9  !0.268482186143556
+  pi=4.0*atan(1.0) ! constant for later use (visible globally)
 
-!
-!     Set initial point, bounds and sigmax for geometric variables (epistemic):
-!
-      do i=1,14
-         sigmax(i)=0.0025
-         X(i) =0.0
-         X_L(i) = -0.01
-         X_U(i) = 0.01
-      end do
+  !======================================
+  !(1)    Set initial point and bounds:
+  !=====================================
+  
+  !
+  ! (1)  Set initial point, bounds and sigmax for geometric variables (epistemic):
+  !
+  
+  do i=1,14
+     sigmax(i)=0.0025
+     X(i) =0.0
+     X_L(i) = -0.01
+     X_U(i) = 0.01
+  end do
 
-      X_L(1) = -0.00125
-      X_U(1) = 0.00125
-      sigmax(1)=0.00125
-      X_L(2) = -0.00125
-      X_U(2) = 0.00125
-      sigmax(2)=0.00125
-      X_L(13) = -0.00125
-      X_U(13) = 0.00125
-      sigmax(13)=0.00125
-      X_L(14) = -0.00125
-      X_U(14) = 0.00125
-      sigmax(14)=0.00125
+  X_L(1) = -0.00125
+  X_U(1) = 0.00125
+  sigmax(1)=0.00125
 
-      !X(1:7)=X_L(1:7)-sigmax(1:7)
-      !X(8:14)=X_L(8:14)-sigmax(8:14)
-      !X_L(1:7)=X(1:7)
-      !X_L(8:14)=X(8:14)
-!
-!     Set initial point, bounds and sigmax for flow variables (aleatory):
-!
+  X_L(2) = -0.00125
+  X_U(2) = 0.00125
+  sigmax(2)=0.00125
 
-      sigmax(N-1)=0.1
-      X(N-1) = 2.0    !alpha in degrees
-      X_L(N-1) = 0.0
-      X_U(N-1) = 4.0
+  X_L(13) = -0.00125
+  X_U(13) = 0.00125
+  sigmax(13)=0.00125
 
-      pi=4.0*atan(1.0)
-      X(N-1) = X(N-1)*pi/180.0
-      sigmax(N-1)=sigmax(N-1)*pi/180.0
-      X_L(N-1) = X_L(N-1)*pi/180.0
-      X_U(N-1) = X_U(N-1)*pi/180.0
+  X_L(14) = -0.00125
+  X_U(14) = 0.00125
+  sigmax(14)=0.00125
+
+  !X(1:7)=X_L(1:7)-sigmax(1:7)
+  !X(8:14)=X_L(8:14)-sigmax(8:14)
+  !X_L(1:7)=X(1:7)
+  !X_L(8:14)=X(8:14)
+
+  !
+  !     Set initial point, bounds and sigmax for flow variables (aleatory):
+  !
+
+  sigmax(N-1)=0.1
+  X(N-1) = 2.0    !alpha in degrees
+  X_L(N-1) = 0.0
+  X_U(N-1) = 4.0
+
+  pi=4.0*atan(1.0)
+  X(N-1) = X(N-1)*pi/180.0
+  sigmax(N-1)=sigmax(N-1)*pi/180.0
+  X_L(N-1) = X_L(N-1)*pi/180.0
+  X_U(N-1) = X_U(N-1)*pi/180.0
 
 
-      sigmax(N)=0.01
-      X(N) = 0.56  !Minf
-      X_L(N) = 0.1
-      X_U(N) = 0.78
+  sigmax(N)=0.01
+  X(N) = 0.56  !Minf
+  X_L(N) = 0.1
+  X_U(N) = 0.78
+  
+  !===================================================================
+  !(2)     Integer Settings and store into IDAT (check for size above)
+  !===================================================================
+  
+  kprob=1  
+  probtype(:)=1
 
-    
-!
-!     Set bounds for the constraints
-!
-      do i=1,M
-         G_L(i)=-infbound
-         G_U(i)=0.0
-      end do
+  IDAT(1)=kprob
+  IDAT(2)=0
+  IDAT(3:N+2)=probtype(1:N)
 
+  !===============================================
+  !(3)     Setup std dev and store in to dat(1:N)
+  !===============================================
+
+  Lifttarget=0.9  !0.268482186143556
+  DAT(1)=Lifttarget
+  do i=2,N+1
+     DAT(i)=sigmax(i-1)
+  end do
+
+  !====================
+  !(4)     Constraints
+  !====================
+
+  do i=1,M
+     G_L(i)=-infbound
+     G_U(i)=0.0
+  end do
+
+  !===========================================================
+  !(5)    Other constants to be passed to the surrogate call
+  !===========================================================
+  
+  pi=4.0*atan(1.0) ! constant for later use
+
+!!$
+!!$  !Problem data and other constants
+!!$  dat(1000+1)=10.0 !height ref
+!!$  dat(1000+2)=1.0e7 !E
+!!$  dat(1000+3)=0.1 !gamma
+!!$  dat(1000+4)=45.0*pi/180.0
+!!$  dat(1000+5)=20000.0
+!!$  ! Max constraint values
+!!$  dat(1000+6)=5000.0    ! psi tensile_sigma1_max=dat(6)      
+!!$  dat(1000+7)=20000.0    ! psi tensile_sigma2_max=dat(7)
+!!$  dat(1000+8)=5000.0    ! psi tensile_sigma3_max=dat(8)
+!!$  !Compressive
+!!$  dat(1000+9)=5000.0    ! psi comp_sigma1_max=dat(9)
+!!$  dat(1000+10)=20000.0   ! psi comp_sigma2_max=dat(10)
+!!$  dat(1000+11)=5000.0   ! psi comp_sigma3_max=dat(11)
+!!$  !Displacement
+!!$  dat(1000+12)=0.005    ! in  max_u_disp=dat(12)
+!!$  dat(1000+13)=0.005    ! in  max_v_disp=dat(12)
+!!$  dat(1000+14)=1.0      ! Factor of safety
+
+  dat(1000+20)=6       ! filenum for PC
+
+!===========================================================================
 !
 !     First create a handle for the Ipopt problem (and read the options
 !     file)
@@ -136,13 +195,11 @@
 
       if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
-!!$      IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
-!!$      if (IERR.ne.0 ) then
-!!$         write(*,*) 'Error opening the Ipopt output file.'
-!!$         goto 9000
-!!$      endif
-!
-
+      IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
+      if (IERR.ne.0 ) then
+         write(*,*) 'Error opening the Ipopt output file.'
+         goto 9000
+      endif
 !!
 !!     Set a callback function to give you control once per iteration.
 !!     You can use it if you want to generate some output, or to stop
@@ -161,17 +218,14 @@
          if (IERR.ne.0 ) goto 9990
       end if
 
-     
-      IDAT(1)=kprob
-      DAT(1)=Lifttarget
-      do i=2,N+1
-         DAT(i)=sigmax(i-1)
-      end do
-
       IERR = IPSOLVE(IPROBLEM, X, G, F, LAM, Z_L, Z_U, IDAT, DAT)
-!
-!     Output:
-!
+
+
+!===================
+! (6)  Output:
+!==================
+
+
       if (id_proc.eq.0) then
 
          if( IERR.eq.IP_SOLVE_SUCCEEDED .or. IERR.eq.5) then
@@ -228,18 +282,22 @@
 ! =============================================================================
 !
       subroutine EV_F(N, X, NEW_X, F, IDAT, DAT, IERR)
-        use dimKrig
+        use dimKrig,only:probtype,id_proc
       implicit none
       integer N, NEW_X,I
       double precision F, X(N),sigmax(N),fmeantmp,fvartmp,fmeanprimetmp(n),fvarprimetmp(n)
       double precision DAT(*),dfdD(n),dfdDD(n,n),v(n)
-      double precision fmin,fmax,gradmin(N),gradmax(N),gtol,low(N-2),up(N-2),Xsave(N)
+      double precision fmin,fmax,gradmin(N),gradmax(N),gtol,low(N-2),up(N-2),Xsave(N),lifttarget
       integer IDAT(*),kprob,NMC
       integer IERR
+      integer::myflag(10) 
 
       if (id_proc.eq.0) print *,'Calc obj',X
 
       kprob=IDAT(1)
+      probtype(1:N)=IDAT(3:N+2)
+
+      Lifttarget=DAT(1)
       do i=1,N
          sigmax(i)=DAT(i+1)
          Xsave(i)=X(i)
@@ -252,11 +310,14 @@
 !!$
 !!$      call optimize(N-2,X,N,fmax,gradmax,low,up,gtol,.true.,.false.,10)
 
-!---- MEAN OF worst OBJECTIVE FUNCTION
+      !---- MEAN OF worst OBJECTIVE FUNCTION
 
       NMC=100000
+      
+      call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
-      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
+
+      !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -302,24 +363,25 @@
 ! =============================================================================
 !
       subroutine EV_G(N, X, NEW_X, M, G, IDAT, DAT, IERR)
-        use dimKrig
+        use dimKrig,only:probtype,id_proc
         implicit none
       integer N, NEW_X, M
       double precision G(M), X(N), sigmax(N), cmean(M), cstd(M), fmeantmp, fvartmp
       double precision DAT(*),Lifttarget,dfdD(n),dfdDtmp(n),dfdDD(n,n),v(n),fmeanprimetmp(n),fvarprimetmp(n)
       double precision fmin,fmax,gradmin(N),gradmax(N),gtol,low(N-2),up(N-2),Xsave(N),dc(M,N)
       integer IDAT(*),kprob,NMC
-      integer IERR, i, j, cnt
+      integer IERR, i, j, cnt,myflag(10)
 
       if (id_proc.eq.0) print *,'Calc con',X
 
-      Lifttarget=DAT(1)
-
       kprob=IDAT(1)
+      probtype(1:N)=IDAT(3:N+2)
+
+      Lifttarget=DAT(1)
       do i=1,N
          sigmax(i)=DAT(i+1)
          Xsave(i)=X(i)
-      end do
+      end do 
 
 !!$      gtol=1e-4
 !!$
@@ -334,7 +396,9 @@
 
       NMC=100000
 
-      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
+      call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+
+!!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
       !fvartmp=0.0
       !fvarprimetmp(:)=0.0
@@ -359,7 +423,7 @@
 
 !---- INEQUALITY CONSTRAINTS gradient
 
-      do j=N-1,N
+      do j=N-1,N !can be 1,N ?
          dc(1,j)=-fmeanprimetmp(j)
          if (fvartmp.ne.0.0) then
             dc(1,j)=dc(1,j)+kprob*fvarprimetmp(j)/(2.0*sqrt(fvartmp))
@@ -391,14 +455,14 @@
 ! =============================================================================
 !
       subroutine EV_GRAD_F(N, X, NEW_X, GRAD, IDAT, DAT, IERR)
-        use dimKrig
+        use dimKrig,only:probtype,id_proc
         implicit none
       integer N, NEW_X,i,j,k
       double precision GRAD(N),GRADtmp(N), X(N), sigmax(N), fmeantmp, fvartmp
       double precision DAT(*),objtmp,gradvar(n),dfdDD(n,n),v(n),fmeanprimetmp(n),fvarprimetmp(n)
-      double precision fmin,fmax,gradmin(N),gradmax(N),gtol,low(N-2),up(N-2),Xsave(N)
+      double precision fmin,fmax,gradmin(N),gradmax(N),gtol,low(N-2),up(N-2),Xsave(N),lifttarget
       integer IDAT(*),kprob,NMC
-      integer IERR
+      integer IERR,myflag(10)
       logical samex
            
       !if (id_proc.eq.0) print *,'Calc obj grad',X
@@ -409,6 +473,9 @@
       end do
 
       kprob=IDAT(1)
+      probtype(1:N)=IDAT(3:N+2)
+
+      Lifttarget=DAT(1)
       do i=1,N
          sigmax(i)=DAT(i+1)
          Xsave(i)=X(i)
@@ -429,7 +496,9 @@
 
          NMC=100000
 
-         call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
+         call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+
+!!         call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
          !fvartmp=0.0
          !fvarprimetmp(:)=0.0
@@ -464,23 +533,24 @@
 ! =============================================================================
 !
       subroutine EV_JAC_G(TASK, N, X, NEW_X, M, NZ, ACON, AVAR, JAC,IDAT, DAT, IERR)
-        use dimKrig
+        use dimKrig,only:probtype,id_proc
         implicit none
       integer TASK, N, NEW_X, M, NZ
       integer ACON(NZ), AVAR(NZ), I, J, K
       double precision X(N), JAC(NZ),sigmax(N), objtmp, fmeantmp, fvartmp  
       double precision DAT(*),dfdD(n),dfdDD(n,n),v(n),Varc(M),dc(M,N),fmeanprimetmp(n),fvarprimetmp(n)
-      double precision fmin,fmax,gradmin(N),gradmax(N),gtol,low(N-2),up(N-2),Xsave(N)
+      double precision fmin,fmax,gradmin(N),gradmax(N),gtol,low(N-2),up(N-2),Xsave(N),lifttarget
       integer IDAT(*)
       integer IERR, kprob, NMC, cnt
       logical samex
- 
+      integer::myflag(10) 
+
       if( TASK.eq.0 ) then 
 
          !if (id_proc.eq.0) print *,'Initialize Jacobian'
-!
-!     structure of Jacobian:
-!
+         !
+         !     structure of Jacobian:
+         !
          do i=1,N
             ACON(i)=1
             AVAR(i)=i
@@ -496,6 +566,9 @@
          end do
 
          kprob=IDAT(1)
+         probtype(1:N)=IDAT(3:N+2)
+
+         Lifttarget=DAT(1)
          do i=1,N
             sigmax(i)=DAT(i+1)
             Xsave(i)=X(i)
@@ -522,7 +595,9 @@
             
             dc(:,:)=0.0
 
-            call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
+            call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+
+!!            call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
             !fvartmp=0.0
             !fvarprimetmp(:)=0.0
@@ -616,7 +691,7 @@
 ! =============================================================================
 !
       subroutine ITER_CB(ALG_MODE, ITER_COUNT,OBJVAL, INF_PR, INF_DU,MU, DNORM, REGU_SIZE, ALPHA_DU, ALPHA_PR, LS_TRIAL, IDAT,DAT, ISTOP)
-        use dimKrig
+        use dimKrig,only:probtype,id_proc
         implicit none
       integer ALG_MODE, ITER_COUNT, LS_TRIAL
       double precision OBJVAL, INF_PR, INF_DU, MU, DNORM, REGU_SIZE
@@ -648,3 +723,41 @@
 
       return
       end
+!====================
+
+
+
+    subroutine epigrads(fct,fctindx,dim,ndimt,xtmp,xstdt,ftmp,dftmp)
+      use omp_lib
+      !    use dimKrig, only: DS,fctindx,reusesamples,ndimt,xavgt,xstdt
+      implicit none
+      integer :: DIM,ndimt,fct,fctindx
+      !   real*8 :: x(DIM),f,df(DIM),d2f(DIM,DIM),scal,scal2,prd,time,time2
+
+      real*8,intent(in)  :: xtmp(ndimt),xstdt(ndimt)
+      real*8,intent(out) :: dftmp(ndimt)
+      real*8::ftmp
+
+      real*8 :: gtol,low(ndimt-DIM),up(ndimt-DIM)
+
+      gtol=1e-6
+      low(1:ndimt-DIM)=xtmp(1:ndimt-DIM)
+      up(1:ndimt-DIM)=xtmp(1:ndimt-DIM)
+
+      if(fctindx.eq.0) then
+
+         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.true.,.false.,fctindx)
+
+      else if (fctindx.eq.4) then
+         
+         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.false.,.false.,fctindx)
+
+      else 
+
+         stop'wrong fct indx'
+
+      end if
+
+      return
+    end subroutine epigrads
+ 

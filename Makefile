@@ -14,7 +14,7 @@ EXE = MixedOUU
 
 # CHANGEME: Here is the name of all object files corresponding to the source
 #           code that you wrote in order to define the problem statement
-OBJS =  problemKriging.o optimize.o CalcstuffBFGS.o
+OBJS = problemKriging.o functions.o BFGSroutines.o optimize.o
 
 # CHANGEME: Additional libraries
 ADDLIBS =
@@ -45,7 +45,7 @@ all: $(EXE)
 
 .SUFFIXES: .f90 .o .F
 
-$(EXE): $(OBJS) Eulersolve.a krigingestimate.a libmir.a
+$(EXE): $(OBJS) krigingestimate.a Eulersolve.a libmir.a tapenade.a
 	$(F90) $(F77LINKFLAGS) $(FFLAGS) -o $@ $^ $(LIBS) -Wl,-rpath=/usr/local/lib
 
 clean:

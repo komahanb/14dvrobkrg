@@ -60,15 +60,18 @@
 !        function f and gradient dfdDtmp values at the current D.
 
 
-           if(fct.ge.1 .and. fct.le.4) then
+!           if(fct.ge.1 .and. fct.le.4) then
          
-              call CalcstuffBFGS(D,ndvart,fobj,dfdD,fct)
+ !             call CalcstuffBFGS(D,ndvart,fobj,dfdD,fct)
 
-           else
+!           else
 
-              call Eulersolve(D,ndvart,0,fobj,dfdD,dfdDD,1,v,fct-10)
+           call Eulersolve(D,ndvart,0,fobj,dfdD,dfdDD,1,v,fct)
+           
+
+
               
-           end if
+ !          end if
 
            dfdDtmp(1:ndvar)=dfdD(1:ndvar)
 
