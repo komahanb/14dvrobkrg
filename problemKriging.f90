@@ -124,8 +124,9 @@
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-  
-  kprob=1  
+    if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
+  do kprob=0,4
+
   probtype(:)=1
 
   IDAT(1)=kprob
@@ -177,7 +178,7 @@
 !!$  dat(1000+13)=0.005    ! in  max_v_disp=dat(12)
 !!$  dat(1000+14)=1.0      ! Factor of safety
 
-  dat(1000+20)=6       ! filenum for PC
+  dat(1000+20)=77       ! filenum for PC
 
 !===========================================================================
 !
@@ -193,7 +194,7 @@
 !     Open output files
 !
 
-      if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
+!      if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
       IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
       if (IERR.ne.0 ) then
@@ -265,13 +266,17 @@
 !
       call IPFREE(IPROBLEM)
       
-      if (id_proc.eq.0) close(76)
+    !  if (id_proc.eq.0) close(76)
 
       call stop_all
 !
  9990 continue
       write(*,*) 'Error setting an option'
       goto 9000
+
+
+   end do
+  if (id_proc.eq.0) close(76)
 
     end program problemKriging
 !
@@ -397,7 +402,7 @@
       NMC=100000
 
       call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
-
+      
 !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
       !fvartmp=0.0
@@ -673,16 +678,6 @@
       return
       end
 
-
-
-
-
-
-
-
-
-
-
 !
 ! =============================================================================
 !
@@ -728,12 +723,8 @@
 
 
     subroutine epigrads(fct,fctindx,dim,ndimt,xtmp,xstdt,ftmp,dftmp)
-      use omp_lib
-      !    use dimKrig, only: DS,fctindx,reusesamples,ndimt,xavgt,xstdt
       implicit none
       integer :: DIM,ndimt,fct,fctindx
-      !   real*8 :: x(DIM),f,df(DIM),d2f(DIM,DIM),scal,scal2,prd,time,time2
-
       real*8,intent(in)  :: xtmp(ndimt),xstdt(ndimt)
       real*8,intent(out) :: dftmp(ndimt)
       real*8::ftmp
@@ -744,12 +735,12 @@
       low(1:ndimt-DIM)=xtmp(1:ndimt-DIM)
       up(1:ndimt-DIM)=xtmp(1:ndimt-DIM)
 
-      if(fctindx.eq.0) then
+      if (fctindx.eq.0) then
 
          call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.true.,.false.,fctindx)
 
       else if (fctindx.eq.4) then
-         
+
          call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.false.,.false.,fctindx)
 
       else 

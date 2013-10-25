@@ -1,4 +1,5 @@
       subroutine optimize(ndvar,D,ndvart,fobj,dfdD,low,up,gtol,maximize,outputscreen,fct)
+        use omp_lib
 
         implicit none
 
@@ -59,19 +60,8 @@
 !        the minimization routine has returned to request the
 !        function f and gradient dfdDtmp values at the current D.
 
-
-!           if(fct.ge.1 .and. fct.le.4) then
-         
- !             call CalcstuffBFGS(D,ndvart,fobj,dfdD,fct)
-
-!           else
-
+           call omp_set_num_threads(omp_get_max_threads())
            call Eulersolve(D,ndvart,0,fobj,dfdD,dfdDD,1,v,fct)
-           
-
-
-              
- !          end if
 
            dfdDtmp(1:ndvar)=dfdD(1:ndvar)
 
