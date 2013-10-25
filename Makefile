@@ -35,18 +35,17 @@ F90 = mpif90
 FFLAGS = -O3 -r8 -openmp
 
 # additional Fortran Compiler options for linking
-F77LINKFLAGS =  -Wl,--rpath -Wl,/home/markus/Miscellaneous/optimizer/Ipopt-3.10.0/lib
+F77LINKFLAGS =  -Wl,--rpath -Wl,/home/komahan/Dropbox/Thesis/Program/Markus/Ipopt-3.10.0/lib
 
 
 # Linker flags
-LIBS = `PKG_CONFIG_PATH=/home/markus/Miscellaneous/optimizer/Ipopt-3.10.0/lib/pkgconfig:/home/markus/Miscellaneous/optimizer/Ipopt-3.10.0/share/pkgconfig: /usr/bin/pkg-config --libs ipopt` -lstdc++ -lm -L/usr/local/lib -lgsl -lgslcblas -lmir
-
+LIBS = `PKG_CONFIG_PATH=/home/komahan/Dropbox/Thesis/Program/Markus/Ipopt-3.10.0/lib/pkgconfig:/home/komahan/Dropbox/Thesis/Program/Markus/Ipopt-3.10.0/share/pkgconfig: /usr/bin/pkg-config --libs ipopt` -lstdc++ -lm -L/usr/local/lib -lgsl -lgslcblas
 
 all: $(EXE)
 
 .SUFFIXES: .f90 .o .F
 
-$(EXE): $(OBJS) Eulersolve.a krigingestimate.a 
+$(EXE): $(OBJS) Eulersolve.a krigingestimate.a libmir.a
 	$(F90) $(F77LINKFLAGS) $(FFLAGS) -o $@ $^ $(LIBS) -Wl,-rpath=/usr/local/lib
 
 clean:
