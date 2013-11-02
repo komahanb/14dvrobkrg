@@ -115,17 +115,16 @@
   X_L(N-1) = X_L(N-1)*pi/180.0
   X_U(N-1) = X_U(N-1)*pi/180.0
 
-
+  
   sigmax(N)=0.01
-  X(N) = 0.56  !Minf
-  X_L(N) = 0.1
+  X(N) = 0.65 !Minf
+  X_L(N) = 0.6
   X_U(N) = 0.78
   
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-    if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
-  do kprob=0,4
+  kprob=1
 
   probtype(:)=1
 
@@ -137,7 +136,7 @@
   !(3)     Setup std dev and store in to dat(1:N)
   !===============================================
 
-  Lifttarget=0.9  !0.268482186143556
+  Lifttarget=0.6  !0.268482186143556
   DAT(1)=Lifttarget
   do i=2,N+1
      DAT(i)=sigmax(i-1)
@@ -194,7 +193,7 @@
 !     Open output files
 !
 
-!      if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
+      if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
 
       IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
       if (IERR.ne.0 ) then
@@ -258,27 +257,29 @@
          write(*,*) 'Mean drag and its variance:',DAT(N+2),DAT(N+3)
 
       end if
+
+      if (id_proc.eq.0) close(76)
          
 !
  9000 continue
-!
-!     Clean up
-!
+      !
+      !     Clean up
+      !
       call IPFREE(IPROBLEM)
-      
-    !  if (id_proc.eq.0) close(76)
+
+      if (id_proc.eq.0) close(76)
 
       call stop_all
-!
- 9990 continue
+
+      !
+      !
+9990  continue
       write(*,*) 'Error setting an option'
-      goto 9000
+      goto 9000  
 
 
-   end do
-  if (id_proc.eq.0) close(76)
+ end program
 
-    end program problemKriging
 !
 ! =============================================================================
 !
@@ -737,17 +738,20 @@
 
       if (fctindx.eq.0) then
 
-         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.true.,.false.,fctindx)
+  !      call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.true.,.false.,fctindx)
 
       else if (fctindx.eq.4) then
 
-         call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.false.,.false.,fctindx)
+   !     call optimize(ndimt-DIM,xtmp,ndimt,ftmp,dftmp,low,up,gtol,.false.,.false.,fctindx)
 
       else 
 
          stop'wrong fct indx'
 
       end if
+
+      dftmp=0.0
+
 
       return
     end subroutine epigrads
