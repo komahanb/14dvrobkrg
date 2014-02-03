@@ -1,6 +1,6 @@
       program problemKriging
 
-        use dimKrig,only:probtype,id_proc
+        use dimKrig,only:probtype,id_proc,fcnt,fgcnt,fghcnt
 !
       implicit none
 !
@@ -64,6 +64,12 @@
 
   pi=4.0*atan(1.0) ! constant for later use (visible globally)
 
+  ! Evals counter initialization
+
+  fcnt=0
+  fgcnt=0
+  fghcnt=0
+
   !======================================
   !(1)    Set initial point and bounds:
   !=====================================
@@ -124,7 +130,7 @@
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-  kprob=2
+  kprob=0
 
   probtype(:)=1
 
@@ -194,6 +200,9 @@
 !
 
       if (id_proc.eq.0) open(unit=76,file='Opt.his',form='formatted',status='replace')
+      
+      if (id_proc.eq.0) open(unit=86,file='beta.his',form='formatted',status='replace')
+
 
       IERR = IPOPENOUTPUTFILE(IPROBLEM, 'IPOPT.OUT', 5)
       if (IERR.ne.0 ) then
@@ -254,11 +263,10 @@
             write(*,*) 'LAM(',i,') = ',LAM(i)
          enddo
          write(*,*)
-         write(*,*) 'Mean drag and its variance:',DAT(N+2),DAT(N+3)
-
+!         write(*,*) 'Mean drag and its variance:',DAT(N+2),DAT(N+3)
+         write(*,'(a,4F13.4)') 'Mean drag, variance, SD, CV:',DAT(N+2),DAT(N+3),sqrt(DAT(N+3)),sqrt(DAT(N+3))/DAT(N+2)
       end if
 
-      if (id_proc.eq.0) close(76)
          
 !
  9000 continue
@@ -268,6 +276,7 @@
       call IPFREE(IPROBLEM)
 
       if (id_proc.eq.0) close(76)
+      if (id_proc.eq.0) close(86)
 
       call stop_all
 
@@ -424,7 +433,9 @@
       
          write(*,*) 'Design variables:',x(1:N)
          write(*,*) 'Constraint value, mean lift and its standard deviation:',G(1),fmeantmp,cstd(1)
-   
+
+         DAT(1020+1)=(fmeantmp/cstd(1))
+
       end if
 
 !---- INEQUALITY CONSTRAINTS gradient
@@ -687,7 +698,7 @@
 ! =============================================================================
 !
       subroutine ITER_CB(ALG_MODE, ITER_COUNT,OBJVAL, INF_PR, INF_DU,MU, DNORM, REGU_SIZE, ALPHA_DU, ALPHA_PR, LS_TRIAL, IDAT,DAT, ISTOP)
-        use dimKrig,only:probtype,id_proc
+        use dimKrig,only:probtype,id_proc,fcnt,fgcnt,fghcnt
         implicit none
       integer ALG_MODE, ITER_COUNT, LS_TRIAL
       double precision OBJVAL, INF_PR, INF_DU, MU, DNORM, REGU_SIZE
@@ -698,19 +709,21 @@
 !
 !     You can put some output here
 !
-      
+
       if (id_proc.eq.0) then
 
          if (ITER_COUNT .eq.0) then
             write(*,*) 
             write(*,*) 'iter    objective      ||grad||        inf_pr          inf_du         lg(mu)'
-            write(76,*) 'iter    objective      ||grad||        inf_pr          inf_du         lg(mu)'
+            write(86,*) 'iter    objective    betag1'
          end if
 
          write(*,'(i5,5e15.7)') ITER_COUNT,OBJVAL,DNORM,INF_PR,INF_DU,MU
-         write(76,'(i5,5e15.7)') ITER_COUNT,OBJVAL,DNORM,INF_PR,INF_DU,MU
+         write(76,'(i5,5e15.7,3i8)') ITER_COUNT,OBJVAL,DNORM,INF_PR,INF_DU,MU,fcnt,fgcnt,fghcnt
+         write(86,'(i5,2e15.7)') ITER_COUNT,OBJVAL,DAT(1020+1)
 
       end if
+
 !
 !     And set ISTOP to 1 if you want Ipopt to stop now.  Below is just a
 !     simple example.

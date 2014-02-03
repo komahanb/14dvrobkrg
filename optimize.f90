@@ -1,10 +1,11 @@
       subroutine optimize(ndvar,D,ndvart,fobj,dfdD,low,up,gtol,maximize,outputscreen,fct)
+        use dimKrig,only:fcnt,fgcnt,fghcnt
         use omp_lib
 
         implicit none
 
         integer   ::   mmax,ndvar,ndvart,Nouter,maxfev,fct
-        parameter      (mmax=80)  !mmax is the maximum number of limited memory corrections.
+        parameter      (mmax=100)  !mmax is the maximum number of limited memory corrections.
 
         double precision :: D(ndvart),fobj,dfdD(ndvart),dfdDtmp(ndvar),dfdDD(ndvart,ndvart),v(ndvart),gtol,low(ndvar),up(ndvar)
  
@@ -59,6 +60,9 @@
         if (task(1:2) .eq. 'FG') then
 !        the minimization routine has returned to request the
 !        function f and gradient dfdDtmp values at the current D.
+
+           fcnt=fcnt+1
+           fgcnt=fgcnt+1
 
            call omp_set_num_threads(omp_get_max_threads())
            call Eulersolve(D,ndvart,1,fobj,dfdD,dfdDD,1,v,fct)
