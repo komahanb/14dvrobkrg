@@ -67,6 +67,7 @@
            call omp_set_num_threads(omp_get_max_threads())
            call Eulersolve(D,ndvart,1,fobj,dfdD,dfdDD,1,v,fct)
 
+
            dfdDtmp(1:ndvar)=dfdD(1:ndvar)
 
            if (maximize) then

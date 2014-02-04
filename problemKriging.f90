@@ -130,7 +130,7 @@
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-  kprob=0
+  kprob=4
 
   probtype(:)=1
 
@@ -329,7 +329,7 @@
 
       NMC=100000
       
-      call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+      call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),9,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 
       !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
@@ -411,7 +411,7 @@
 
       NMC=100000
 
-      call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+      call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),9,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
       
 !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
@@ -513,7 +513,7 @@
 
          NMC=100000
 
-         call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+         call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),9,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 !!         call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
@@ -612,7 +612,7 @@
             
             dc(:,:)=0.0
 
-            call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),5,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+            call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),9,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 !!            call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
@@ -737,6 +737,7 @@
 
 
     subroutine epigrads(fct,fctindx,dim,ndimt,xtmp,xstdt,ftmp,dftmp)
+      use omp_lib
       implicit none
       integer :: DIM,ndimt,fct,fctindx
       real*8,intent(in)  :: xtmp(ndimt),xstdt(ndimt)
@@ -763,8 +764,7 @@
 
       end if
 
-      dftmp=0.0
-
+      dftmp(:)=0.0
 
       return
     end subroutine epigrads
