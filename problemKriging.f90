@@ -130,12 +130,12 @@
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-  kprob=0
+  kprob=4
 
   probtype(:)=1
 
   IDAT(1)=kprob
-  IDAT(2)=1
+  IDAT(2)=0
   IDAT(3:N+2)=probtype(1:N)
 
   !===============================================
@@ -297,7 +297,7 @@
 ! =============================================================================
 !
       subroutine EV_F(N, X, NEW_X, F, IDAT, DAT, IERR)
-        use dimKrig,only:probtype,id_proc,fcnt,fgcnt,fghcnt
+        use dimKrig,only:probtype,id_proc
       implicit none
       integer N, NEW_X,I
       double precision F, X(N),sigmax(N),fmeantmp,fvartmp,fmeanprimetmp(n),fvarprimetmp(n)
@@ -329,18 +329,15 @@
 
       NMC=100000
       
-!      call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),9,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+      call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 
       !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
-      fvartmp=0.0
-      fvarprimetmp(:)=0.0
-      call Eulersolve(X,N,0,fmeantmp,dfdD,dfdDD,1,v,0)
-      fmeanprimetmp(:)=dfdD(:)
-
-      fcnt=fcnt+1
-      fgcnt=fgcnt+1
+      !fvartmp=0.0
+      !fvarprimetmp(:)=0.0
+      !call Eulersolve(X,N,0,fmeantmp,dfdD,dfdDD,1,v,0)
+      !fmeanprimetmp(:)=dfdD(:)
 
   
 !---- COMBINED OBJECTIVE FUNCTION
@@ -381,7 +378,7 @@
 ! =============================================================================
 !
       subroutine EV_G(N, X, NEW_X, M, G, IDAT, DAT, IERR)
-        use dimKrig,only:probtype,id_proc,fcnt,fgcnt,fghcnt
+        use dimKrig,only:probtype,id_proc
         implicit none
       integer N, NEW_X, M
       double precision G(M), X(N), sigmax(N), cmean(M), cstd(M), fmeantmp, fvartmp
@@ -414,17 +411,14 @@
 
       NMC=100000
 
-!      call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),9,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+      call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
       
 !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
-      fvartmp=0.0
-      fvarprimetmp(:)=0.0
-      call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
-      fmeanprimetmp(:)=dfdD(:) 
-
-      fcnt=fcnt+1
-      fgcnt=fgcnt+1
+      !fvartmp=0.0
+      !fvarprimetmp(:)=0.0
+      !call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
+      !fmeanprimetmp(:)=dfdD(:) 
 
 
       cmean(1)=Lifttarget-fmeantmp
@@ -478,7 +472,7 @@
 ! =============================================================================
 !
       subroutine EV_GRAD_F(N, X, NEW_X, GRAD, IDAT, DAT, IERR)
-        use dimKrig,only:probtype,id_proc,fcnt,fgcnt,fghcnt
+        use dimKrig,only:probtype,id_proc
         implicit none
       integer N, NEW_X,i,j,k
       double precision GRAD(N),GRADtmp(N), X(N), sigmax(N), fmeantmp, fvartmp
@@ -519,20 +513,17 @@
 
          NMC=100000
 
-!         call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),9,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+         call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 !!         call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
-         fvartmp=0.0
-         fvarprimetmp(:)=0.0
-         call Eulersolve(x,n,0,fmeantmp,GRADtmp,dfdDD,1,v,0)
-         fmeanprimetmp(:)=GRADtmp(:) 
+         !fvartmp=0.0
+         !fvarprimetmp(:)=0.0
+         !call Eulersolve(x,n,0,fmeantmp,GRADtmp,dfdDD,1,v,0)
+         !fmeanprimetmp(:)=GRADtmp(:) 
 
          GRAD(N-1:N)=fmeanprimetmp(N-1:N)+fvarprimetmp(N-1:N)
    
-!      fcnt=fcnt+1
-      fgcnt=fgcnt+1
-
       end if
 
       !---- GRADIENT OF worst OBJECTIVE FUNCTION
@@ -540,9 +531,6 @@
       call Eulersolve(Xsave,N,0,objtmp,GRADtmp,dfdDD,1,v,0)
       
       GRAD(1:N-2)=GRADtmp(1:N-2)
-
-!      fcnt=fcnt+1
-      fgcnt=fgcnt+1
 
       do i=1,N
          X(i)=Xsave(i)
@@ -562,7 +550,7 @@
 ! =============================================================================
 !
       subroutine EV_JAC_G(TASK, N, X, NEW_X, M, NZ, ACON, AVAR, JAC,IDAT, DAT, IERR)
-        use dimKrig,only:probtype,id_proc,fcnt,fgcnt,fghcnt
+        use dimKrig,only:probtype,id_proc
         implicit none
       integer TASK, N, NEW_X, M, NZ
       integer ACON(NZ), AVAR(NZ), I, J, K
@@ -624,18 +612,14 @@
             
             dc(:,:)=0.0
 
- !           call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),9,2,9,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+            call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 !!            call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
-            fvartmp=0.0
-            fvarprimetmp(:)=0.0
-            call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
-            fmeanprimetmp(:)=dfdD(:) 
-
-!            fcnt=fcnt+1
-            fgcnt=fgcnt+1
-
+            !fvartmp=0.0
+            !fvarprimetmp(:)=0.0
+            !call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
+            !fmeanprimetmp(:)=dfdD(:) 
                
             do j=N-1,N
                dc(1,j)=-fmeanprimetmp(j)
@@ -652,9 +636,7 @@
          jac(1:N-2)=-dfdD(1:N-2)
 
          jac(N-1:N)=dc(1,N-1:N)
-         
-         !      fcnt=fcnt+1
-         fgcnt=fgcnt+1
+
 
          do i=1,N
             X(i)=Xsave(i)

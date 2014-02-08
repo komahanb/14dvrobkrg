@@ -1,8 +1,8 @@
 #read -p "Enter prob value:" i
-cp *.his kprobdet/
-cp HISTG* kprobdet/
-cp screen kprobdet/
-cp fort.* kprobdet/
-cp -rf design/ kprobdet/.
-cp -rf results/ kprobdet/.
-echo "Success saving the results into kprob"
+mv *.his kprob4/
+mv HISTG* kprob4/
+mv screen kprob4/
+mv fort.* kprob4/
+cp -rf design/ kprob4/.
+cp -rf results/ kprob4/.
+echo "Success saving the results into kprob4"
