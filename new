@@ -1,0 +1,24 @@
+Reviewer: 2
+
+Comments to the Author
+I enjoyed reading the revision. The authors did make great effort to revise the manuscript and most of issues or concerns raised by reviewers have been correctly addressed. Particularly, the writing of the article has been greatly improved. The following comments are some further discussion that may make the article more valuable:
+1)      The authors infers from Fig. 5 that the local surrogate models indeed provide accurate local approximation of the real function space and this behavior can be exploited to overcome the lack of .... Page 17, line 2 to line 8. The interpretation is not fully convincible, due to the fact that if there is few samples in the space, either global surrogate models nor local surrogate models give good approximation of the real function and that with increase of number of training points (sample points), the agreement of RSMD and RSME becomes worse (see Fig.5). Lack of reasonable interpretation may let the readers to question that the agreement might be a coincidence. I did see that the author made a lot of effort to address this issue. If currently we can’t find appropriate interpretation, maybe a good way is to say this question is still open.
+2)      The authors propose to use RSMD as a kind of total error estimation to evaluate the accuracy surrogate model. This is very interesting. However, there are already some methods available for evaluate the accuracy of surrogate models, such as kick-one (or “n”)-out cross validation (CV). It will be interesting to compare proposed method with CV. Furthermore, let’s think about the spatial distribution of the error (not total error). I don’t think the spatial distribution of discrepancy between local- and global surrogates will also agrees with the real error so well.
+3)      Page 20, fig.9. According to the past experience, the “strange” behavior of kriging (line with triangle symbol) is due to the failed tuning of the hyperparameters. I strongly suggest the authors to make sure that their kriging code has a “good” tuning strategy.
+4)      Page. 27, Fig21. Comparison of dynamic training point method proposed in this article with Kriging MSE is missing for the aerodynamic test case (like did Fig.9). In addition, the comparison of RSMD and actual RSME is missing (like did in Fig.5).
+5)      Page 30. I would remind the authors that from a reader’s point of view it seems like that the conclusions drawn from the analytical test cases don’t apply for the aerodynamic case.
+6)      For Ref. 48, their exits a journal version of the aiaa paper (alternative cokriging model for variable-fidelity surrogate modeling, aiaa j, vol.50, no.5,). It might to better to cite the journal paper as well.
+
+
+Reviewer: 1
+
+Comments to the Author
+Most of my comments can be found in the attached document (2ndReview_Boopathy2013.pdf). Some of my comments require only minor/cosmetic changes, however I would like to point out a few issues:
+(1) I am still not too convinced that the comparison between LHS and the proposed method is fair (I elaborate further in the attached document). Wouldn't it be more fair if you compare your approach to a deterministic approach, e.g., Halton sequence sampling for your more detailed study, to remove the randomness (which is present in LHS), so you can have a more apple-to-apple comparison and have less fluctuations in the convergence plots? I saw that you compare it to Halton sampling, but most of your more rigorous comparisons are done with LHS. If you think the comparison is fair, then try to convince the readers.
+(2) Can RMSD always approximate RMSE well? How to ensure that it's the case, since your method relies on this assumption a lot?
+(3) Discuss more about the applicability of the approach.
+
+Reviewer: 3
+
+Comments to the Author
+(There are no comments.)

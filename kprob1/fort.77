@@ -1,0 +1,3036 @@
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  3 ) =  0.11E+00
+ 
+ >> Best design: Sample point   2 Fct value   0.1396295
+    with X value   0.0877731   0.1778220
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36953
+      >>    1 Pareto Designs until   0 Gen.,  0.736E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.771E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.771E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  22  12) :  0.7715E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   77.146   0.000
+      >> Theta =    0.039   0.027
+ >> Theta      =    0.039   0.027
+ >> Deviation  =     0.12735E+00
+ >> Likelihood =     0.77146E+02 with Error =     0.18921E-05
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.99701E-08 among    11 pts
+ 
+ >> Best design: Sample point   2 Fct value   0.1396295
+    with X value   0.0877731   0.1778220
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   2 Fct value   0.1396295
+    with X value   0.0877731   0.1778220
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.34907E-01    0.65000E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.18593E+00    0.29751E-03
+      >> Meanprime =     0.97280E+01    0.32029E+00
+      >> Varprime =     0.21639E-02    0.11298E-02
+      >> Range of X(min) =   -0.189  -0.268
+      >> Range of X(max) =    1.317   1.201
+      >> Ymax/min =     0.27045E+00    0.11398E+00
+      >> Output Histogram  [    0.11398E+00 :    0.27045E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  2,  7 ) =  0.17E+00
+ 
+ >> Best design: Sample point  11 Fct value   0.0006600
+    with X value   0.0230850   0.0945831
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36954
+      >>    1 Pareto Designs until   0 Gen.,  0.883E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.889E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.889E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  21) :  0.8887E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   88.872   0.000
+      >> Theta =    0.251   0.870
+ >> Theta      =    0.251   0.870
+ >> Deviation  =     0.61363E-06
+ >> Likelihood =     0.88872E+02 with Error =     0.67294E-13
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.28482E-15 among    11 pts
+ 
+ >> Best design: Sample point  11 Fct value   0.0006600
+    with X value   0.0230850   0.0945831
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point  11 Fct value   0.0006600
+    with X value   0.0230850   0.0945831
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.34907E-01    0.65000E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.90315E-03    0.26294E-07
+      >> Meanprime =     0.40624E-01    0.10001E-01
+      >> Varprime =     0.54561E-05    0.46950E-05
+      >> Range of X(min) =   -0.207  -0.221
+      >> Range of X(max) =    1.207   1.226
+      >> Ymax/min =     0.27790E-02    0.49350E-03
+      >> Output Histogram  [    0.49350E-03 :    0.27790E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  2,  9 ) =  0.67E-01
+ 
+ >> Best design: Sample point   3 Fct value   0.0007219
+    with X value   0.0625507   0.4428238
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36955
+      >>    1 Pareto Designs until   0 Gen.,  0.101E+03
+      >>    1 Pareto Designs until  12 Gen.,  0.101E+03
+      >>    1 Pareto Designs until  24 Gen.,  0.101E+03
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  15) :  0.1010E+03
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =  100.975   0.000
+      >> Theta =    6.470   0.392
+ >> Theta      =    6.470   0.392
+ >> Deviation  =     0.18270E-07
+ >> Likelihood =     0.10098E+03 with Error =     0.43642E-13
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.25368E-16 among    11 pts
+ 
+ >> Best design: Sample point   3 Fct value   0.0007219
+    with X value   0.0625507   0.4428238
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   3 Fct value   0.0007219
+    with X value   0.0625507   0.4428238
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.34907E-01    0.65000E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.88513E-03    0.43244E-08
+      >> Meanprime =     0.91211E-03    0.14622E-02
+      >> Varprime =    -0.20430E-05    0.43134E-07
+      >> Range of X(min) =   -0.192  -0.198
+      >> Range of X(max) =    1.187   1.236
+      >> Ymax/min =     0.11811E-02    0.72213E-03
+      >> Output Histogram  [    0.72213E-03 :    0.11811E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  3, 11 ) =  0.13E+00
+ 
+ >> Best design: Sample point   2 Fct value   0.6179906
+    with X value   0.2683148   0.1268208
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36956
+      >>    1 Pareto Designs until   0 Gen.,  0.542E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.543E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.543E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24   3) :  0.5428E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   54.275   0.000
+      >> Theta =    0.268   0.056
+ >> Theta      =    0.268   0.056
+ >> Deviation  =     0.21085E-01
+ >> Likelihood =     0.54275E+02 with Error =     0.40511E-10
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.17694E-11 among    11 pts
+ 
+ >> Best design: Sample point   2 Fct value   0.6179906
+    with X value   0.2683148   0.1268208
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   2 Fct value   0.6179906
+    with X value   0.2683148   0.1268208
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.62851E-01    0.66241E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.66182E+00    0.37327E-03
+      >> Meanprime =     0.95644E+01    0.96932E+00
+      >> Varprime =    -0.23235E-02    0.10511E-02
+      >> Range of X(min) =   -0.344  -0.222
+      >> Range of X(max) =    1.218   1.215
+      >> Ymax/min =     0.73596E+00    0.56280E+00
+      >> Output Histogram  [    0.56280E+00 :    0.73596E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  2,  8 ) =  0.12E+00
+ 
+ >> Best design: Sample point  10 Fct value   0.0070294
+    with X value   0.6889913   0.0339774
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36957
+      >>    1 Pareto Designs until   0 Gen.,  0.742E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.771E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.771E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24   2) :  0.7707E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   77.066   0.000
+      >> Theta =    0.034   0.190
+ >> Theta      =    0.034   0.190
+ >> Deviation  =     0.12061E-02
+ >> Likelihood =     0.77066E+02 with Error =     0.17372E-08
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.18656E-11 among    11 pts
+ 
+ >> Best design: Sample point  10 Fct value   0.0070294
+    with X value   0.6889913   0.0339774
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point  10 Fct value   0.0070294
+    with X value   0.6889913   0.0339774
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.62851E-01    0.66241E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.16658E-01    0.24337E-04
+      >> Meanprime =     0.68958E+00    0.47345E+00
+      >> Varprime =     0.93678E-03    0.81548E-03
+      >> Range of X(min) =   -0.198  -0.186
+      >> Range of X(max) =    1.201   1.193
+      >> Ymax/min =     0.39652E-01    0.35263E-02
+      >> Output Histogram  [    0.35263E-02 :    0.39652E-01 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  4 ) =  0.73E-01
+ 
+ >> Best design: Sample point   6 Fct value   0.5719792
+    with X value   0.0053123   0.0074879
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36958
+      >>    1 Pareto Designs until   0 Gen.,  0.633E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.637E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.637E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24   5) :  0.6366E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   63.661   0.000
+      >> Theta =    0.137   0.027
+ >> Theta      =    0.137   0.027
+ >> Deviation  =     0.70492E-01
+ >> Likelihood =     0.63661E+02 with Error =     0.11348E-07
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.28481E-10 among    11 pts
+ 
+ >> Best design: Sample point   6 Fct value   0.5719792
+    with X value   0.0053123   0.0074879
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   6 Fct value   0.5719792
+    with X value   0.0053123   0.0074879
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.62570E-01    0.65227E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.65168E+00    0.38983E-03
+      >> Meanprime =     0.97320E+01    0.10091E+01
+      >> Varprime =     0.92797E-02   -0.60122E-03
+      >> Range of X(min) =   -0.239  -0.318
+      >> Range of X(max) =    1.246   1.200
+      >> Ymax/min =     0.72973E+00    0.57006E+00
+      >> Output Histogram  [    0.57006E+00 :    0.72973E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  8 ) =  0.68E-01
+ 
+ >> Best design: Sample point  11 Fct value   0.0046627
+    with X value   0.9077817   0.0247338
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36959
+      >>    1 Pareto Designs until   0 Gen.,  0.709E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.752E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.752E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  13) :  0.7519E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   75.193   0.000
+      >> Theta =    0.129   0.224
+ >> Theta      =    0.129   0.224
+ >> Deviation  =     0.29945E-03
+ >> Likelihood =     0.75193E+02 with Error =     0.17906E-09
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.43079E-12 among    11 pts
+ 
+ >> Best design: Sample point  11 Fct value   0.0046627
+    with X value   0.9077817   0.0247338
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point  11 Fct value   0.0046627
+    with X value   0.9077817   0.0247338
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.62570E-01    0.65227E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.10535E-01    0.14736E-04
+      >> Meanprime =     0.54503E+00    0.36433E+00
+      >> Varprime =     0.87703E-03    0.80808E-03
+      >> Range of X(min) =   -0.246  -0.198
+      >> Range of X(max) =    1.220   1.198
+      >> Ymax/min =     0.30479E-01    0.22479E-02
+      >> Output Histogram  [    0.22479E-02 :    0.30479E-01 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  2 ) =  0.17E-01
+ 
+ >> Best design: Sample point   8 Fct value   0.5730601
+    with X value   0.1060250   0.1038808
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36960
+      >>    1 Pareto Designs until   0 Gen.,  0.644E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.671E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.671E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  21   9) :  0.6706E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   67.063   0.000
+      >> Theta =    0.040   0.082
+ >> Theta      =    0.040   0.082
+ >> Deviation  =     0.98250E-01
+ >> Likelihood =     0.67063E+02 with Error =     0.37788E-06
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.87062E-09 among    11 pts
+ 
+ >> Best design: Sample point   8 Fct value   0.5730601
+    with X value   0.1060250   0.1038808
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   8 Fct value   0.5730601
+    with X value   0.1060250   0.1038808
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.60210E-01    0.61573E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.63419E+00    0.39522E-03
+      >> Meanprime =     0.96148E+01    0.10712E+01
+      >> Varprime =     0.50050E-02    0.29510E-02
+      >> Range of X(min) =   -0.195  -0.196
+      >> Range of X(max) =    1.210   1.300
+      >> Ymax/min =     0.73144E+00    0.55394E+00
+      >> Output Histogram  [    0.55394E+00 :    0.73144E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1, 10 ) =  0.11E+00
+ 
+ >> Best design: Sample point   4 Fct value   0.0024063
+    with X value   0.1874166   0.0122032
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36961
+      >>    1 Pareto Designs until   0 Gen.,  0.803E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.831E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.831E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  20  23) :  0.8309E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   83.094   0.000
+      >> Theta =    0.080   0.273
+ >> Theta      =    0.080   0.273
+ >> Deviation  =     0.97255E-04
+ >> Likelihood =     0.83094E+02 with Error =     0.18920E-09
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.13065E-12 among    11 pts
+ 
+ >> Best design: Sample point   4 Fct value   0.0024063
+    with X value   0.1874166   0.0122032
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   4 Fct value   0.0024063
+    with X value   0.1874166   0.0122032
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.60210E-01    0.61573E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.38184E-02    0.18657E-05
+      >> Meanprime =     0.19444E+00    0.11664E+00
+      >> Varprime =     0.22300E-03    0.23173E-03
+      >> Range of X(min) =   -0.253  -0.207
+      >> Range of X(max) =    1.196   1.201
+      >> Ymax/min =     0.15341E-01    0.16235E-02
+      >> Output Histogram  [    0.16235E-02 :    0.15341E-01 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  2,  4 ) =  0.74E-01
+ 
+ >> Best design: Sample point  10 Fct value   0.5773644
+    with X value   0.0413099   0.1701627
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36962
+      >>    1 Pareto Designs until   0 Gen.,  0.656E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.681E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.681E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  10) :  0.6811E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   68.115   0.000
+      >> Theta =    0.024   0.049
+ >> Theta      =    0.024   0.049
+ >> Deviation  =     0.31918E+00
+ >> Likelihood =     0.68115E+02 with Error =     0.11190E-06
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.11975E-08 among    11 pts
+ 
+ >> Best design: Sample point  10 Fct value   0.5773644
+    with X value   0.0413099   0.1701627
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point  10 Fct value   0.5773644
+    with X value   0.0413099   0.1701627
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.58867E-01    0.60754E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.64012E+00    0.38182E-03
+      >> Meanprime =     0.94533E+01    0.10342E+01
+      >> Varprime =     0.45134E-02    0.30050E-02
+      >> Range of X(min) =   -0.215  -0.213
+      >> Range of X(max) =    1.241   1.252
+      >> Ymax/min =     0.72835E+00    0.56061E+00
+      >> Output Histogram  [    0.56061E+00 :    0.72835E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  3,  8 ) =  0.22E+00
+ 
+ >> Best design: Sample point  11 Fct value   0.0024052
+    with X value   0.0419378   0.1459962
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36963
+      >>    1 Pareto Designs until   0 Gen.,  0.785E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.791E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.791E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  12) :  0.7912E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   79.121   0.000
+      >> Theta =    0.115   0.364
+ >> Theta      =    0.115   0.364
+ >> Deviation  =     0.45501E-04
+ >> Likelihood =     0.79121E+02 with Error =     0.65297E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.86834E-14 among    11 pts
+ 
+ >> Best design: Sample point  11 Fct value   0.0024052
+    with X value   0.0419378   0.1459962
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point  11 Fct value   0.0024052
+    with X value   0.0419378   0.1459962
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.58867E-01    0.60754E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.33909E-02    0.96659E-06
+      >> Meanprime =     0.12905E+00    0.79435E-01
+      >> Varprime =     0.16906E-03    0.14188E-03
+      >> Range of X(min) =   -0.235  -0.275
+      >> Range of X(max) =    1.211   1.198
+      >> Ymax/min =     0.12541E-01    0.21213E-02
+      >> Output Histogram  [    0.21213E-02 :    0.12541E-01 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  7 ) =  0.97E-01
+ 
+ >> Best design: Sample point   8 Fct value   0.5696646
+    with X value   0.0239560   0.1687486
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36964
+      >>    1 Pareto Designs until   0 Gen.,  0.709E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.716E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.716E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  21  24) :  0.7156E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   71.564   0.000
+      >> Theta =    0.027   0.035
+ >> Theta      =    0.027   0.035
+ >> Deviation  =     0.40243E+00
+ >> Likelihood =     0.71564E+02 with Error =     0.48760E-05
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.93588E-08 among    11 pts
+ 
+ >> Best design: Sample point   8 Fct value   0.5696646
+    with X value   0.0239560   0.1687486
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   8 Fct value   0.5696646
+    with X value   0.0239560   0.1687486
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.56745E-01    0.60260E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.63284E+00    0.36604E-03
+      >> Meanprime =     0.93443E+01    0.98682E+00
+      >> Varprime =     0.46837E-02    0.27635E-02
+      >> Range of X(min) =   -0.259  -0.298
+      >> Range of X(max) =    1.218   1.232
+      >> Ymax/min =     0.71860E+00    0.55557E+00
+      >> Output Histogram  [    0.55557E+00 :    0.71860E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  2 ) =  0.16E+00
+ 
+ >> Best design: Sample point   8 Fct value   0.0024550
+    with X value   0.2162196   0.1806832
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36965
+      >>    1 Pareto Designs until   0 Gen.,  0.814E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.819E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.819E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  23) :  0.8194E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   81.935   0.000
+      >> Theta =    0.149   0.591
+ >> Theta      =    0.149   0.591
+ >> Deviation  =     0.10520E-04
+ >> Likelihood =     0.81935E+02 with Error =     0.14349E-10
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.97929E-14 among    11 pts
+ 
+ >> Best design: Sample point   8 Fct value   0.0024550
+    with X value   0.2162196   0.1806832
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   8 Fct value   0.0024550
+    with X value   0.2162196   0.1806832
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.56745E-01    0.60260E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.31350E-02    0.56992E-06
+      >> Meanprime =     0.10896E+00    0.58529E-01
+      >> Varprime =     0.11008E-03    0.86423E-04
+      >> Range of X(min) =   -0.207  -0.200
+      >> Range of X(max) =    1.234   1.194
+      >> Ymax/min =     0.90733E-02    0.21683E-02
+      >> Output Histogram  [    0.21683E-02 :    0.90733E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  3,  5 ) =  0.14E+00
+ 
+ >> Best design: Sample point   7 Fct value   0.5791873
+    with X value   0.0112810   0.6536755
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36966
+      >>    1 Pareto Designs until   0 Gen.,  0.699E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.720E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.720E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  19   4) :  0.7196E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   71.958   0.000
+      >> Theta =    0.031   0.033
+ >> Theta      =    0.031   0.033
+ >> Deviation  =     0.25483E+00
+ >> Likelihood =     0.71958E+02 with Error =     0.49365E-06
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.76811E-08 among    11 pts
+ 
+ >> Best design: Sample point   7 Fct value   0.5791873
+    with X value   0.0112810   0.6536755
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   7 Fct value   0.5791873
+    with X value   0.0112810   0.6536755
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.48933E-01    0.60069E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.61848E+00    0.35030E-03
+      >> Meanprime =     0.92355E+01    0.93938E+00
+      >> Varprime =     0.35813E-02    0.25488E-02
+      >> Range of X(min) =   -0.240  -0.231
+      >> Range of X(max) =    1.217   1.280
+      >> Ymax/min =     0.70833E+00    0.54179E+00
+      >> Output Histogram  [    0.54179E+00 :    0.70833E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  7, 11 ) =  0.89E-01
+ 
+ >> Best design: Sample point   6 Fct value   0.0024161
+    with X value   0.4894764   0.0207421
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36967
+      >>    1 Pareto Designs until   0 Gen.,  0.815E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.820E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.820E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  23) :  0.8201E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   82.012   0.000
+      >> Theta =    0.145   0.517
+ >> Theta      =    0.145   0.517
+ >> Deviation  =     0.99232E-05
+ >> Likelihood =     0.82012E+02 with Error =     0.52570E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.53683E-14 among    11 pts
+ 
+ >> Best design: Sample point   6 Fct value   0.0024161
+    with X value   0.4894764   0.0207421
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   6 Fct value   0.0024161
+    with X value   0.4894764   0.0207421
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.48933E-01    0.60069E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.29592E-02    0.43262E-06
+      >> Meanprime =     0.98063E-01    0.50176E-01
+      >> Varprime =     0.80931E-04    0.68729E-04
+      >> Range of X(min) =   -0.187  -0.218
+      >> Range of X(max) =    1.208   1.210
+      >> Ymax/min =     0.93853E-02    0.22099E-02
+      >> Output Histogram  [    0.22099E-02 :    0.93853E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  5, 11 ) =  0.71E-01
+ 
+ >> Best design: Sample point   4 Fct value   0.5626737
+    with X value   0.0732891   0.1255068
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36968
+      >>    1 Pareto Designs until   0 Gen.,  0.706E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.717E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.717E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  11) :  0.7171E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   71.712   0.000
+      >> Theta =    0.035   0.041
+ >> Theta      =    0.035   0.041
+ >> Deviation  =     0.23618E+00
+ >> Likelihood =     0.71712E+02 with Error =     0.85958E-06
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.15473E-07 among    11 pts
+ 
+ >> Best design: Sample point   4 Fct value   0.5626737
+    with X value   0.0732891   0.1255068
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   4 Fct value   0.5626737
+    with X value   0.0732891   0.1255068
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.44016E-01    0.60092E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.62204E+00    0.35094E-03
+      >> Meanprime =     0.91959E+01    0.95404E+00
+      >> Varprime =     0.38314E-02    0.26026E-02
+      >> Range of X(min) =   -0.194  -0.185
+      >> Range of X(max) =    1.208   1.232
+      >> Ymax/min =     0.71457E+00    0.55302E+00
+      >> Output Histogram  [    0.55302E+00 :    0.71457E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  7, 11 ) =  0.14E+00
+ 
+ >> Best design: Sample point   2 Fct value   0.0022857
+    with X value   0.1885183   0.0135629
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36969
+      >>    1 Pareto Designs until   0 Gen.,  0.824E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.825E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.825E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24   1) :  0.8247E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   82.466   0.000
+      >> Theta =    0.097   0.379
+ >> Theta      =    0.097   0.379
+ >> Deviation  =     0.27095E-04
+ >> Likelihood =     0.82466E+02 with Error =     0.21317E-10
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.10069E-13 among    11 pts
+ 
+ >> Best design: Sample point   2 Fct value   0.0022857
+    with X value   0.1885183   0.0135629
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   2 Fct value   0.0022857
+    with X value   0.1885183   0.0135629
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.44016E-01    0.60092E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.31045E-02    0.65817E-06
+      >> Meanprime =     0.11020E+00    0.64209E-01
+      >> Varprime =     0.88199E-04    0.10079E-03
+      >> Range of X(min) =   -0.217  -0.208
+      >> Range of X(max) =    1.233   1.218
+      >> Ymax/min =     0.11699E-01    0.20447E-02
+      >> Output Histogram  [    0.20447E-02 :    0.11699E-01 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  5, 10 ) =  0.83E-01
+ 
+ >> Best design: Sample point   2 Fct value   0.5649879
+    with X value   0.1244944   0.0423290
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36970
+      >>    1 Pareto Designs until   0 Gen.,  0.707E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.717E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.717E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  22  22) :  0.7173E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   71.734   0.000
+      >> Theta =    0.011   0.034
+ >> Theta      =    0.011   0.034
+ >> Deviation  =     0.15521E+01
+ >> Likelihood =     0.71734E+02 with Error =     0.25499E-04
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.54026E-06 among    11 pts
+ 
+ >> Best design: Sample point   2 Fct value   0.5649879
+    with X value   0.1244944   0.0423290
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   2 Fct value   0.5649879
+    with X value   0.1244944   0.0423290
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.44081E-01    0.60091E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.62332E+00    0.35091E-03
+      >> Meanprime =     0.91924E+01    0.95787E+00
+      >> Varprime =     0.35167E-02    0.25067E-02
+      >> Range of X(min) =   -0.192  -0.188
+      >> Range of X(max) =    1.238   1.242
+      >> Ymax/min =     0.70607E+00    0.54929E+00
+      >> Output Histogram  [    0.54929E+00 :    0.70607E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  7, 11 ) =  0.13E+00
+ 
+ >> Best design: Sample point   8 Fct value   0.0023295
+    with X value   0.0995142   0.1839919
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36971
+      >>    1 Pareto Designs until   0 Gen.,  0.804E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.827E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.827E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24   3) :  0.8271E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   82.715   0.000
+      >> Theta =    0.116   0.655
+ >> Theta      =    0.116   0.655
+ >> Deviation  =     0.85012E-05
+ >> Likelihood =     0.82715E+02 with Error =     0.35872E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.56230E-14 among    11 pts
+ 
+ >> Best design: Sample point   8 Fct value   0.0023295
+    with X value   0.0995142   0.1839919
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   8 Fct value   0.0023295
+    with X value   0.0995142   0.1839919
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.44081E-01    0.60091E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.31291E-02    0.68119E-06
+      >> Meanprime =     0.10484E+00    0.66582E-01
+      >> Varprime =     0.10085E-03    0.98674E-04
+      >> Range of X(min) =   -0.206  -0.194
+      >> Range of X(max) =    1.185   1.338
+      >> Ymax/min =     0.96332E-02    0.22073E-02
+      >> Output Histogram  [    0.22073E-02 :    0.96332E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  9 ) =  0.14E+00
+ 
+ >> Best design: Sample point   8 Fct value   0.5659933
+    with X value   0.1431066   0.1143950
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36972
+      >>    1 Pareto Designs until   0 Gen.,  0.707E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.722E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.722E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  21  18) :  0.7215E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   72.153   0.000
+      >> Theta =    0.036   0.036
+ >> Theta      =    0.036   0.036
+ >> Deviation  =     0.18809E+00
+ >> Likelihood =     0.72153E+02 with Error =     0.10529E-05
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.29028E-08 among    11 pts
+ 
+ >> Best design: Sample point   8 Fct value   0.5659933
+    with X value   0.1431066   0.1143950
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   8 Fct value   0.5659933
+    with X value   0.1431066   0.1143950
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.41406E-01    0.60001E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.61897E+00    0.34516E-03
+      >> Meanprime =     0.91825E+01    0.93757E+00
+      >> Varprime =     0.32528E-02    0.23523E-02
+      >> Range of X(min) =   -0.205  -0.206
+      >> Range of X(max) =    1.189   1.194
+      >> Ymax/min =     0.70053E+00    0.54268E+00
+      >> Output Histogram  [    0.54268E+00 :    0.70053E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1, 11 ) =  0.14E+00
+ 
+ >> Best design: Sample point   7 Fct value   0.0024136
+    with X value   0.2009506   0.2995013
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36973
+      >>    1 Pareto Designs until   0 Gen.,  0.787E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.812E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.812E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  23  22) :  0.8120E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   81.197   0.000
+      >> Theta =    0.122   0.455
+ >> Theta      =    0.122   0.455
+ >> Deviation  =     0.20201E-04
+ >> Likelihood =     0.81197E+02 with Error =     0.28210E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.76619E-14 among    11 pts
+ 
+ >> Best design: Sample point   7 Fct value   0.0024136
+    with X value   0.2009506   0.2995013
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   7 Fct value   0.0024136
+    with X value   0.2009506   0.2995013
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.41406E-01    0.60001E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.29182E-02    0.36783E-06
+      >> Meanprime =     0.91322E-01    0.45377E-01
+      >> Varprime =     0.65579E-04    0.63121E-04
+      >> Range of X(min) =   -0.189  -0.185
+      >> Range of X(max) =    1.216   1.248
+      >> Ymax/min =     0.10804E-01    0.18455E-02
+      >> Output Histogram  [    0.18455E-02 :    0.10804E-01 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  2,  9 ) =  0.96E-01
+ 
+ >> Best design: Sample point   4 Fct value   0.5587846
+    with X value   0.0479227   0.1880148
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36974
+      >>    1 Pareto Designs until   0 Gen.,  0.731E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.732E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.732E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  17) :  0.7315E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   73.153   0.000
+      >> Theta =    0.028   0.038
+ >> Theta      =    0.028   0.038
+ >> Deviation  =     0.29562E+00
+ >> Likelihood =     0.73153E+02 with Error =     0.31373E-05
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.37577E-08 among    11 pts
+ 
+ >> Best design: Sample point   4 Fct value   0.5587846
+    with X value   0.0479227   0.1880148
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   4 Fct value   0.5587846
+    with X value   0.0479227   0.1880148
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.37357E-01    0.60004E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.61746E+00    0.34411E-03
+      >> Meanprime =     0.91898E+01    0.93881E+00
+      >> Varprime =     0.35120E-02    0.23440E-02
+      >> Range of X(min) =   -0.246  -0.190
+      >> Range of X(max) =    1.235   1.273
+      >> Ymax/min =     0.70426E+00    0.54584E+00
+      >> Output Histogram  [    0.54584E+00 :    0.70426E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1, 11 ) =  0.15E+00
+ 
+ >> Best design: Sample point   2 Fct value   0.0022603
+    with X value   0.1508730   0.0327518
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36975
+      >>    1 Pareto Designs until   0 Gen.,  0.820E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.842E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.842E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  19) :  0.8423E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   84.231   0.000
+      >> Theta =    0.115   0.441
+ >> Theta      =    0.115   0.441
+ >> Deviation  =     0.13799E-04
+ >> Likelihood =     0.84231E+02 with Error =     0.46634E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.38860E-14 among    11 pts
+ 
+ >> Best design: Sample point   2 Fct value   0.0022603
+    with X value   0.1508730   0.0327518
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   2 Fct value   0.0022603
+    with X value   0.1508730   0.0327518
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.37357E-01    0.60004E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.28894E-02    0.27151E-06
+      >> Meanprime =     0.79054E-01    0.38155E-01
+      >> Varprime =     0.45464E-04    0.48081E-04
+      >> Range of X(min) =   -0.227  -0.241
+      >> Range of X(max) =    1.215   1.203
+      >> Ymax/min =     0.99528E-02    0.21870E-02
+      >> Output Histogram  [    0.21870E-02 :    0.99528E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  4,  5 ) =  0.15E+00
+ 
+ >> Best design: Sample point  10 Fct value   0.5624904
+    with X value   0.0117511   0.2981880
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36976
+      >>    1 Pareto Designs until   0 Gen.,  0.724E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.725E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.725E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  20) :  0.7248E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   72.477   0.000
+      >> Theta =    0.019   0.027
+ >> Theta      =    0.019   0.027
+ >> Deviation  =     0.65295E+00
+ >> Likelihood =     0.72477E+02 with Error =     0.15648E-05
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.87404E-09 among    11 pts
+ 
+ >> Best design: Sample point  10 Fct value   0.5624904
+    with X value   0.0117511   0.2981880
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point  10 Fct value   0.5624904
+    with X value   0.0117511   0.2981880
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.38559E-01    0.60024E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.61961E+00    0.34757E-03
+      >> Meanprime =     0.91853E+01    0.94665E+00
+      >> Varprime =     0.31822E-02    0.24309E-02
+      >> Range of X(min) =   -0.209  -0.239
+      >> Range of X(max) =    1.188   1.203
+      >> Ymax/min =     0.69830E+00    0.53864E+00
+      >> Output Histogram  [    0.53864E+00 :    0.69830E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  2,  7 ) =  0.18E+00
+ 
+ >> Best design: Sample point   9 Fct value   0.0022869
+    with X value   0.0146243   0.2059121
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36977
+      >>    1 Pareto Designs until   0 Gen.,  0.764E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.807E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.807E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  15) :  0.8071E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   80.710   0.000
+      >> Theta =    0.148   0.571
+ >> Theta      =    0.148   0.571
+ >> Deviation  =     0.88578E-05
+ >> Likelihood =     0.80710E+02 with Error =     0.10490E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.18826E-14 among    11 pts
+ 
+ >> Best design: Sample point   9 Fct value   0.0022869
+    with X value   0.0146243   0.2059121
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   9 Fct value   0.0022869
+    with X value   0.0146243   0.2059121
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.38559E-01    0.60024E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.28994E-02    0.32123E-06
+      >> Meanprime =     0.88506E-01    0.41863E-01
+      >> Varprime =     0.66851E-04    0.54759E-04
+      >> Range of X(min) =   -0.201  -0.197
+      >> Range of X(max) =    1.185   1.195
+      >> Ymax/min =     0.84673E-02    0.20721E-02
+      >> Output Histogram  [    0.20721E-02 :    0.84673E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  7 ) =  0.45E-01
+ 
+ >> Best design: Sample point   2 Fct value   0.5623673
+    with X value   0.1615524   0.0095930
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36978
+      >>    1 Pareto Designs until   0 Gen.,  0.725E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.736E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.736E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  22   2) :  0.7358E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   73.583   0.000
+      >> Theta =    0.040   0.029
+ >> Theta      =    0.040   0.029
+ >> Deviation  =     0.28177E+00
+ >> Likelihood =     0.73583E+02 with Error =     0.69280E-05
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.16785E-06 among    11 pts
+ 
+ >> Best design: Sample point   2 Fct value   0.5623673
+    with X value   0.1615524   0.0095930
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   2 Fct value   0.5623673
+    with X value   0.1615524   0.0095930
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.36770E-01    0.60006E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.61842E+00    0.34695E-03
+      >> Meanprime =     0.92135E+01    0.94031E+00
+      >> Varprime =     0.58520E-02    0.22312E-02
+      >> Range of X(min) =   -0.244  -0.188
+      >> Range of X(max) =    1.186   1.227
+      >> Ymax/min =     0.70015E+00    0.54679E+00
+      >> Output Histogram  [    0.54679E+00 :    0.70015E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  7,  8 ) =  0.12E+00
+ 
+ >> Best design: Sample point   2 Fct value   0.0022623
+    with X value   0.0804766   0.0996028
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36979
+      >>    1 Pareto Designs until   0 Gen.,  0.874E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.883E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.883E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  23  14) :  0.8833E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   88.334   0.000
+      >> Theta =    0.046   0.955
+ >> Theta      =    0.046   0.955
+ >> Deviation  =     0.34269E-05
+ >> Likelihood =     0.88334E+02 with Error =     0.69128E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.18231E-14 among    11 pts
+ 
+ >> Best design: Sample point   2 Fct value   0.0022623
+    with X value   0.0804766   0.0996028
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   2 Fct value   0.0022623
+    with X value   0.0804766   0.0996028
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.36770E-01    0.60006E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.29660E-02    0.52702E-06
+      >> Meanprime =     0.44480E-01    0.53669E-01
+      >> Varprime =    -0.33388E-05    0.84719E-04
+      >> Range of X(min) =   -0.196  -0.188
+      >> Range of X(max) =    1.206   1.251
+      >> Ymax/min =     0.64309E-02    0.21508E-02
+      >> Output Histogram  [    0.21508E-02 :    0.64309E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  9 ) =  0.12E+00
+ 
+ >> Best design: Sample point   3 Fct value   0.5608945
+    with X value   0.1174290   0.0615469
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36980
+      >>    1 Pareto Designs until   0 Gen.,  0.696E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.724E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.724E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  10) :  0.7241E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   72.411   0.000
+      >> Theta =    0.012   0.033
+ >> Theta      =    0.012   0.033
+ >> Deviation  =     0.12284E+01
+ >> Likelihood =     0.72411E+02 with Error =     0.18649E-04
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.19568E-06 among    11 pts
+ 
+ >> Best design: Sample point   3 Fct value   0.5608945
+    with X value   0.1174290   0.0615469
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   3 Fct value   0.5608945
+    with X value   0.1174290   0.0615469
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.36798E-01    0.60006E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.61877E+00    0.34553E-03
+      >> Meanprime =     0.91691E+01    0.94586E+00
+      >> Varprime =     0.39005E-02    0.24620E-02
+      >> Range of X(min) =   -0.267  -0.287
+      >> Range of X(max) =    1.266   1.277
+      >> Ymax/min =     0.72349E+00    0.53366E+00
+      >> Output Histogram  [    0.53366E+00 :    0.72349E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  5,  7 ) =  0.17E+00
+ 
+ >> Best design: Sample point   9 Fct value   0.0022791
+    with X value   0.0494861   0.1633868
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36981
+      >>    1 Pareto Designs until   0 Gen.,  0.847E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.875E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.875E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  16) :  0.8748E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   87.479   0.000
+      >> Theta =    0.102   0.596
+ >> Theta      =    0.102   0.596
+ >> Deviation  =     0.44407E-05
+ >> Likelihood =     0.87479E+02 with Error =     0.16583E-10
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.38088E-14 among    11 pts
+ 
+ >> Best design: Sample point   9 Fct value   0.0022791
+    with X value   0.0494861   0.1633868
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   9 Fct value   0.0022791
+    with X value   0.0494861   0.1633868
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.36798E-01    0.60006E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.29010E-02    0.27977E-06
+      >> Meanprime =     0.84753E-01    0.39928E-01
+      >> Varprime =     0.28418E-04    0.44607E-04
+      >> Range of X(min) =   -0.205  -0.185
+      >> Range of X(max) =    1.207   1.226
+      >> Ymax/min =     0.73694E-02    0.21665E-02
+      >> Output Histogram  [    0.21665E-02 :    0.73694E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  7 ) =  0.12E+00
+ 
+ >> Best design: Sample point   5 Fct value   0.5738921
+    with X value   0.1711887   0.2457746
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36982
+      >>    1 Pareto Designs until   0 Gen.,  0.714E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.745E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.745E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  18  10) :  0.7447E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   74.465   0.000
+      >> Theta =    0.016   0.031
+ >> Theta      =    0.016   0.031
+ >> Deviation  =     0.83080E+00
+ >> Likelihood =     0.74465E+02 with Error =     0.26612E-05
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.50016E-07 among    11 pts
+ 
+ >> Best design: Sample point   5 Fct value   0.5738921
+    with X value   0.1711887   0.2457746
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   5 Fct value   0.5738921
+    with X value   0.1711887   0.2457746
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.36014E-01    0.60003E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.61848E+00    0.34554E-03
+      >> Meanprime =     0.91743E+01    0.94333E+00
+      >> Varprime =     0.29874E-02    0.23628E-02
+      >> Range of X(min) =   -0.192  -0.187
+      >> Range of X(max) =    1.204   1.226
+      >> Ymax/min =     0.70016E+00    0.54774E+00
+      >> Output Histogram  [    0.54774E+00 :    0.70016E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1,  4 ) =  0.39E-01
+ 
+ >> Best design: Sample point   5 Fct value   0.0023263
+    with X value   0.1749461   0.1363028
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36983
+      >>    1 Pareto Designs until   0 Gen.,  0.848E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.856E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.856E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24   9) :  0.8560E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   85.598   0.000
+      >> Theta =    0.164   0.646
+ >> Theta      =    0.164   0.646
+ >> Deviation  =     0.42256E-05
+ >> Likelihood =     0.85598E+02 with Error =     0.91563E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.63786E-14 among    11 pts
+ 
+ >> Best design: Sample point   5 Fct value   0.0023263
+    with X value   0.1749461   0.1363028
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   5 Fct value   0.0023263
+    with X value   0.1749461   0.1363028
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.36014E-01    0.60003E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.29062E-02    0.30434E-06
+      >> Meanprime =     0.83505E-01    0.42976E-01
+      >> Varprime =     0.42434E-04    0.46913E-04
+      >> Range of X(min) =   -0.203  -0.282
+      >> Range of X(max) =    1.194   1.214
+      >> Ymax/min =     0.77078E-02    0.22249E-02
+      >> Output Histogram  [    0.22249E-02 :    0.77078E-02 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  6,  7 ) =  0.78E-01
+ 
+ >> Best design: Sample point  11 Fct value   0.5656330
+    with X value   0.0524779   0.3019133
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36984
+      >>    1 Pareto Designs until   0 Gen.,  0.705E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.726E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.726E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  17) :  0.7264E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   72.637   0.000
+      >> Theta =    0.035   0.037
+ >> Theta      =    0.035   0.037
+ >> Deviation  =     0.20349E+00
+ >> Likelihood =     0.72637E+02 with Error =     0.41035E-06
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.33152E-08 among    11 pts
+ 
+ >> Best design: Sample point  11 Fct value   0.5656330
+    with X value   0.0524779   0.3019133
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point  11 Fct value   0.5656330
+    with X value   0.0524779   0.3019133
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.36036E-01    0.60003E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    4
+ 
+      >> Mean and Variance =     0.61868E+00    0.34601E-03
+      >> Meanprime =     0.91820E+01    0.94673E+00
+      >> Varprime =     0.31923E-02    0.24405E-02
+      >> Range of X(min) =   -0.191  -0.284
+      >> Range of X(max) =    1.204   1.200
+      >> Ymax/min =     0.69767E+00    0.54951E+00
+      >> Output Histogram  [    0.54951E+00 :    0.69767E+00 ]
+ 
+ >> Program call is successful
+ 
+ >> Initial Sample Points by Latin Hypercube
+      >> Output to sample.dat   11
+ >> Reading KrigSet.inp
+      >> # of Optimizing Functions =    1
+      >> # of Constraint Functions =    0
+      >> # of K/DCOK/ICOK/DUM/VFM  =    0   1   0   1   1
+      >> # of Max Sample/G/H/Hv    =    0************
+      >> Ordinary Kriging
+      >> Use Wendland C4 SCF
+      >> Use All Hess for Direct Cokriging
+      >> Add epsilon on Diagonal Rij, epsilon =   0.222E-15
+      >> Cross Correlation Relaxation Factor  =   0.9999000
+ >> Reading sample.dat
+      >> # of DV, Func, Samples =     2    2   11
+      >> # of Fidelity Levels   =     1
+      >> Fidelity Level :  1
+           >> # of Samples(F     )    =    11
+      >> Min. Dist. between Fidelity-1 Samples (  1, 10 ) =  0.79E-01
+ 
+ >> Best design: Sample point   3 Fct value   0.0022374
+    with X value   0.1131565   0.0070096
+ 
+ >> Reduce Sample Points for Function  1
+           >> # of Modes in Fid-1 =  11   0   0   0   0   0  11
+           >> # of Modes (sum)    =  11   0   0   0   0   0
+ >> Size of Correlation Matrix =     11
+ *mdv   != ndv in paramGALN.inp                 
+ *mdat  != ndat in paramGALN.inp                 
+ *meva  != neva in paramGALN.inp                 
+ >> Reading Parameter from paramGALN.inp
+      >> # of Population       =    24
+      >> # of Generation       =    24
+      >> # of Design Variables =     2
+      >> # of Objectives       =     1
+      >> Set of Objectives     :   Max
+      >> Likelihood Maximization for Theta
+ >> Check Again the Parameters Setting
+      >> Use new sharing function (index-based)
+      >> Use old fitness function (1/rank)
+      >> Use blended crossover
+           >> Probability of directional crossover =    0.100   0.100
+           >> Probability of neighborhood cultivation =    0.500   0.500
+      >> Use old uniform mutation
+ >> Make Initial Population by LHS
+ >> Calling evaluation in GA
+ >> Starting Main Loop of GA36985
+      >>    1 Pareto Designs until   0 Gen.,  0.856E+02
+      >>    1 Pareto Designs until  12 Gen.,  0.858E+02
+      >>    1 Pareto Designs until  24 Gen.,  0.858E+02
+ >> Finishing Main Loop of GA
+ >> Output Results....
+      >> Best Design for  1 : (  24  15) :  0.8581E+02
+      >> # of Function Evaluations for New Ones  =      600
+      >> # of Function Evaluations for Gradient  =        0
+      >> # of Function Evaluations for 1D Search =        0
+      >> # of Function Evaluations in Total      =      600
+      >> Best Design =   85.809   0.000
+      >> Theta =    0.189   0.571
+ >> Theta      =    0.189   0.571
+ >> Deviation  =     0.42167E-05
+ >> Likelihood =     0.85809E+02 with Error =     0.36242E-11
+ >> Output to meta01.krg
+      >> RMSE on All Sample Points    =    0.37438E-14 among    11 pts
+ 
+ >> Best design: Sample point   3 Fct value   0.0022374
+    with X value   0.1131565   0.0070096
+ 
+ >> Make "dak" Database for metamodel
+ 
+ >> Best design: Sample point   3 Fct value   0.0022374
+    with X value   0.1131565   0.0070096
+ 
+ >> MonteCarlo Simulation on Kriging Model
+      >> Target Function =   1
+      >> All Design Variables Fluctuated
+      >> # of Monte-Carlo Samples =    50000
+           >> [         1     50000 ] for Processor  0
+ 
+      >> xavg     0.36036E-01    0.60003E+00
+      >> xstd     0.17453E-02    0.10000E-01
+      >> Fctindx    0
+ 
+      >> Mean and Variance =     0.29295E-02    0.30699E-06
+      >> Meanprime =     0.80060E-01    0.44220E-01
+      >> Varprime =     0.34501E-04    0.46486E-04
+      >> Range of X(min) =   -0.314  -0.207
+      >> Range of X(max) =    1.195   1.199
+      >> Ymax/min =     0.78968E-02    0.22280E-02
+      >> Output Histogram  [    0.22280E-02 :    0.78968E-02 ]
+ 
+ >> Program call is successful
+ 

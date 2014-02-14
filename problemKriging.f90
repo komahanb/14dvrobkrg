@@ -130,7 +130,7 @@
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-  kprob=4
+  kprob=0
 
   probtype(:)=1
 
@@ -329,15 +329,15 @@
 
       NMC=100000
       
-      call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+     ! call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 
       !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
-      !fvartmp=0.0
-      !fvarprimetmp(:)=0.0
-      !call Eulersolve(X,N,0,fmeantmp,dfdD,dfdDD,1,v,0)
-      !fmeanprimetmp(:)=dfdD(:)
+      fvartmp=0.0
+      fvarprimetmp(:)=0.0
+      call Eulersolve(X,N,0,fmeantmp,dfdD,dfdDD,1,v,0)
+      fmeanprimetmp(:)=dfdD(:)
 
   
 !---- COMBINED OBJECTIVE FUNCTION
@@ -411,14 +411,14 @@
 
       NMC=100000
 
-      call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+      !call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
       
 !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
-      !fvartmp=0.0
-      !fvarprimetmp(:)=0.0
-      !call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
-      !fmeanprimetmp(:)=dfdD(:) 
+      fvartmp=0.0
+      fvarprimetmp(:)=0.0
+      call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
+      fmeanprimetmp(:)=dfdD(:) 
 
 
       cmean(1)=Lifttarget-fmeantmp
@@ -513,14 +513,14 @@
 
          NMC=100000
 
-         call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+!         call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 !!         call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
-         !fvartmp=0.0
-         !fvarprimetmp(:)=0.0
-         !call Eulersolve(x,n,0,fmeantmp,GRADtmp,dfdDD,1,v,0)
-         !fmeanprimetmp(:)=GRADtmp(:) 
+         fvartmp=0.0
+         fvarprimetmp(:)=0.0
+         call Eulersolve(x,n,0,fmeantmp,GRADtmp,dfdDD,1,v,0)
+         fmeanprimetmp(:)=GRADtmp(:) 
 
          GRAD(N-1:N)=fmeanprimetmp(N-1:N)+fvarprimetmp(N-1:N)
    
@@ -612,14 +612,14 @@
             
             dc(:,:)=0.0
 
-            call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+!            call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 !!            call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
-            !fvartmp=0.0
-            !fvarprimetmp(:)=0.0
-            !call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
-            !fmeanprimetmp(:)=dfdD(:) 
+            fvartmp=0.0
+            fvarprimetmp(:)=0.0
+            call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
+            fmeanprimetmp(:)=dfdD(:) 
                
             do j=N-1,N
                dc(1,j)=-fmeanprimetmp(j)
@@ -703,7 +703,7 @@
       integer ALG_MODE, ITER_COUNT, LS_TRIAL
       double precision OBJVAL, INF_PR, INF_DU, MU, DNORM, REGU_SIZE
       double precision ALPHA_DU, ALPHA_PR
-      double precision DAT(*)
+      double precision DAT(*),tol
       integer IDAT(*)
       integer ISTOP
 !
@@ -728,7 +728,16 @@
 !     And set ISTOP to 1 if you want Ipopt to stop now.  Below is just a
 !     simple example.
 !
-      if (ITER_COUNT .gt. 1 .and. DNORM.le.1D-04) ISTOP = 1
+
+      if (ITER_COUNT .gt. 1 ) then
+
+         open(unit=59,file='dnorm.inp',status='old')
+         read(59,*) tol
+         close(59)
+
+         if (DNORM.le.tol) ISTOP = 1  
+
+      end if
 
       return
       end
