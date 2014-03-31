@@ -80,10 +80,29 @@
   
   do i=1,14
      sigmax(i)=0.0025
-     X(i) =0.0
+!     X(i) =0.0
      X_L(i) = -0.01
      X_U(i) = 0.01
   end do
+
+
+ X  (           1 ) =   1.242650776235041E-003
+ X  (           2 ) =   1.240248648238098E-003
+ X  (           3 ) =   9.975251634183306E-003
+ X  (           4 ) =   9.973057006608943E-003
+ X  (           5 ) =   9.972114193823168E-003
+ X  (           6 ) =   9.972911308073493E-003
+ X  (           7 ) =   9.977694929604616E-003
+ X  (           8 ) =   9.971227136290825E-003
+ X  (           9 ) =   9.992918072307342E-003
+ X  (          10 ) =   9.971393704431477E-003
+ X  (          11 ) =   9.998554654760187E-003
+ X  (          12 ) =   9.988968643203222E-003
+ X  (          13 ) =   1.239926635205071E-003
+ X  (          14 ) =   1.242156990691747E-003
+
+ X  (          15 ) =    2.06469126407243d0     
+ X  (          16 ) =   0.600026041126049d0   
 
   X_L(1) = -0.00125
   X_U(1) = 0.00125
@@ -111,7 +130,7 @@
   !
 
   sigmax(N-1)=0.1
-  X(N-1) = 2.0    !alpha in degrees
+!  X(N-1) = 2.0    !alpha in degrees
   X_L(N-1) = 0.0
   X_U(N-1) = 4.0
 
@@ -123,14 +142,14 @@
 
   
   sigmax(N)=0.01
-  X(N) = 0.65 !Minf
+  !X(N) = 0.65 !Minf
   X_L(N) = 0.6
   X_U(N) = 0.78
   
   !===================================================================
   !(2)     Integer Settings and store into IDAT (check for size above)
   !===================================================================
-  kprob=0
+  kprob=1
 
   probtype(:)=1
 
@@ -324,20 +343,20 @@
 !!$      up(1:N-2)=X(1:N-2)+sigmax(1:N-2)
 !!$
 !!$      call optimize(N-2,X,N,fmax,gradmax,low,up,gtol,.true.,.false.,10)
-
-      !---- MEAN OF worst OBJECTIVE FUNCTION
-
-      NMC=100000
       
-     ! call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
+      !---- MEAN OF worst OBJECTIVE FUNCTION
+      
+      NMC=100000
+
+      call Krigingestimate(2,N,x,sigmax,22,0,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
 
       !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
-      fvartmp=0.0
-      fvarprimetmp(:)=0.0
-      call Eulersolve(X,N,0,fmeantmp,dfdD,dfdDD,1,v,0)
-      fmeanprimetmp(:)=dfdD(:)
+      !     fvartmp=0.0
+      !     fvarprimetmp(:)=0.0
+      !     call Eulersolve(X,N,0,fmeantmp,dfdD,dfdDD,1,v,0)
+      !     fmeanprimetmp(:)=dfdD(:)
 
   
 !---- COMBINED OBJECTIVE FUNCTION
@@ -352,6 +371,9 @@
          write(*,*) 'Mean drag value and variance:',fmeantmp,fvartmp
      
       end if
+
+
+      stop
 
 !---- OBJECTIVE FUNCTION gradient and x value
 
@@ -389,6 +411,7 @@
 
       if (id_proc.eq.0) print *,'Calc con',X
 
+
       kprob=IDAT(1)
       probtype(1:N)=IDAT(3:N+2)
 
@@ -411,14 +434,14 @@
 
       NMC=100000
 
-      !call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
-      
-!!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
+      call Krigingestimate(2,N,x,sigmax,22,4,DAT(1001:1020),11,2,11,0,probtype,myflag,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp)
 
-      fvartmp=0.0
-      fvarprimetmp(:)=0.0
-      call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
-      fmeanprimetmp(:)=dfdD(:) 
+      !!      call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
+
+  !    fvartmp=0.0
+  !    fvarprimetmp(:)=0.0
+  !    call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
+  !    fmeanprimetmp(:)=dfdD(:) 
 
 
       cmean(1)=Lifttarget-fmeantmp
@@ -517,16 +540,17 @@
 
 !!         call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,0)
 
-         fvartmp=0.0
-         fvarprimetmp(:)=0.0
-         call Eulersolve(x,n,0,fmeantmp,GRADtmp,dfdDD,1,v,0)
-         fmeanprimetmp(:)=GRADtmp(:) 
+!         fvartmp=0.0
+!        fvarprimetmp(:)=0.0
+!         call Eulersolve(x,n,0,fmeantmp,GRADtmp,dfdDD,1,v,0)
+!         fmeanprimetmp(:)=GRADtmp(:) 
 
          GRAD(N-1:N)=fmeanprimetmp(N-1:N)+fvarprimetmp(N-1:N)
    
       end if
 
       !---- GRADIENT OF worst OBJECTIVE FUNCTION
+
 
       call Eulersolve(Xsave,N,0,objtmp,GRADtmp,dfdDD,1,v,0)
       
@@ -616,10 +640,10 @@
 
 !!            call Krigingestimate(2,X,N,sigmax,fmeantmp,fvartmp,fmeanprimetmp,fvarprimetmp,NMC,4)
 
-            fvartmp=0.0
-            fvarprimetmp(:)=0.0
-            call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
-            fmeanprimetmp(:)=dfdD(:) 
+!            fvartmp=0.0
+!            fvarprimetmp(:)=0.0
+!            call Eulersolve(x,n,0,fmeantmp,dfdD,dfdDD,1,v,4)
+!            fmeanprimetmp(:)=dfdD(:) 
                
             do j=N-1,N
                dc(1,j)=-fmeanprimetmp(j)
@@ -630,6 +654,7 @@
 
 
          end if
+
 
          call Eulersolve(Xsave,N,0,objtmp,dfdD,dfdDD,1,v,4)
 
@@ -723,19 +748,24 @@
          write(86,'(i5,2e15.7)') ITER_COUNT,OBJVAL,DAT(1020+1)
 
       end if
+         
+   if (ITER_COUNT .eq.0)  call stop_all
+         
+      
 
 !
 !     And set ISTOP to 1 if you want Ipopt to stop now.  Below is just a
 !     simple example.
 !
 
-      if (ITER_COUNT .gt. 1 ) then
+      if (ITER_COUNT .gt. 0 ) then
 
          open(unit=59,file='dnorm.inp',status='old')
          read(59,*) tol
          close(59)
 
          if (DNORM.le.tol) ISTOP = 1  
+
 
       end if
 
